@@ -29,6 +29,23 @@ if (isset($_POST['btnDelete'])) {
     }
 }
 
+
+// Update handle
+if (isset($_POST['btnUpdate'])) {
+    if (!empty($_POST['taskId'])) {
+        $taskId = $_POST['taskId'];
+        $updateContent = $_POST['updateContent'];
+        $queryString = "UPDATE tasks SET name = '$updateContent' WHERE id = $taskId";
+        $result = mysqli_query($con, $queryString);
+
+        if (!$result) {
+            die('Error Update');
+        }
+    }
+}
+
+
+
 header('location: index.php');
 
 ?>

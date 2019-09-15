@@ -41,7 +41,12 @@ require('get_data.php');
                 ?>
                 <div class="item">
                     <!-- <div class="content"> // $task['name'] </div> -->
-                    <input type="text" class="content" value="<?= $task['name'] ?>">
+                    <!-- <input type="text" class="content" style="background-color:#4CB9CD; border: none;" value="<?= $task['name'] ?>"> -->
+                    <form action="handle_form.php" method="POST">
+                        <input type="text" name="updateContent" class="content" style="background-color:#4CB9CD; border: none;" value="<?= $task['name'] ?>">
+                        <input type="hidden" name="taskId" value="<?php echo $task['id']?>">
+                        <button type="submit" name="btnUpdate" class="update">Update</button>
+                    </form>
 
                     <form action="handle_form.php" method="POST">
                         <input type="hidden" name="taskId" value="<?php echo $task['id']?>">

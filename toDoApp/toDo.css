@@ -76,7 +76,7 @@ input {
     float: left;
 }
 
-.item .delete {
+.item .delete, .item .update {
     float: right;
     position: absolute;
     top: 20%;
@@ -86,7 +86,5 @@ input {
     font-size: 30px;
     font-weight: bold;
     color: #015D6F;
-
-
-
 }
+

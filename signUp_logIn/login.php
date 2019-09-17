@@ -13,10 +13,15 @@
         <input type="password" name="txtPassword" placeholder="Password" id=""> <br/>
         <button type="submit" name="btnLogin">Sign In</button>
     </form>
+    <h3>Don't have account?</h3>
+    <br/>
+    <a href="signup.php">Sign Up</a>
+
     <?php 
         session_start();
         if (isset($_SESSION['login_fail_mes'])) {
-            echo '<h2>' . $_SESSION('login_fail_mes') . '</h2>';
+            echo '<h2>' . $_SESSION['login_fail_mes'] . '</h2>';
+            unset($_SESSION['login_fail_mes']);
         }
     ?>
 

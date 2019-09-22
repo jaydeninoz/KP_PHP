@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+            $.post("./handler.php", {name:$("#name").val(), birthYear:$("#birthYear").val()}, function(data){
+                var obj = JSON.parse(data);
+                $("p").html(obj.name + " " + obj.age);
+                $("p").css({"background-color": obj.colour});
+            });      
+        });
+
+
+         
+    });
+    </script>
+</head>
+<body>
+    <!-- <form action="./handler.php" method="post"> -->
+        <input type="text" name="name" placeholder="Your usermame" id="name">
+        <input type="number" name="birthYear" placeholder="Year of Birth" id="birthYear">
+        <button type="button" id="btn">Submit</button>
+    <!-- </form> -->
+    <p></p>
+    <br>
+    <iframe width="961" height="541" src="https://www.youtube.com/embed/iWZmdoY1aTE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

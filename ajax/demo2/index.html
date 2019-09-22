@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        // $("h2").html(2);
+
+
+        $("#btn").click(function(){
+            $.post("./handle.php", {firstNumber:1, secondNumber:2}, function(data){
+                $("h2").html(data);
+            });
+        });    
+    });
+    </script>
+</head>
+<body>
+
+    <button id="btn">Click Me</button>
+    <h2>...</h2>
+
+    <iframe width="961" height="541" src="https://www.youtube.com/embed/iWZmdoY1aTE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

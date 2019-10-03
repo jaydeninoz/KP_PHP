@@ -1,7 +1,7 @@
 <?php 
 require "./../db.php";
 
-$sotin1trang = 4;
+$sotin1trang = 10;
 $trangdangxem = $_GET["trang"];
 settype($trangdangxem, "int");
 
@@ -21,7 +21,7 @@ while ($r = mysqli_fetch_assoc($rows)) {
 }
 
 echo json_encode($mang);
- 
+
 class SanPham{
     public $ID;
     public $TEN;
@@ -30,5 +30,3 @@ class SanPham{
         $this->TEN = $t;
     }
 }
-
-?>

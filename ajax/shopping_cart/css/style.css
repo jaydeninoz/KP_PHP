@@ -1,0 +1,18 @@
+h1 {
+    /* margin: 50px 30% 50px 30%; */
+    width: 20%;
+    margin: auto;
+    display: block;
+}
+
+.product-list {
+    background-color: lightblue;
+}
+
+.summary {
+    background-color: lightpink;
+}
+
+.cart-summary {
+    background-color: #fce54a;
+}
